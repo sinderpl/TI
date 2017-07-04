@@ -4,15 +4,16 @@ import java.util.ArrayList;
  * 
  * @author Alan Niemiec
  * 
- * Calculates and returns the Fibonacci Sequence up to n amount of numbers
+ * Calculates and returns the Fibonacci Sequence up to int size amount of numbers
+ * Starts with seeds of F1 = 1 & F2 = 1
  *
  */
 public class Fibonacci implements INumberSequence{
 	
 	//ArrayList stores the number sequence
-	public ArrayList<Integer> sequence = new ArrayList<Integer>();
+	private ArrayList<Integer> sequence = new ArrayList<Integer>();
 	//Keeping track of the previous number in the recursive method
-	public int prevNum = 0;
+	private int prevNum = 1;
 	
 	
 	/**
@@ -22,7 +23,7 @@ public class Fibonacci implements INumberSequence{
 	 */
 	public void calculate(int size) {
 		//Variables to keep track of the numbers
-		int prev = 0;
+		int prev = 1;
 		int curr = 1;
 		
 		//Simple for loop 
@@ -62,5 +63,12 @@ public class Fibonacci implements INumberSequence{
 			return newNumber;
 		}
 
+	}
+	
+	/**
+	 * Returns the number sequence
+	 */
+	public ArrayList<Integer> getSequence() {
+		return sequence;
 	}
 }

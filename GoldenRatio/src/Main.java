@@ -1,4 +1,9 @@
-
+/**
+ * 
+ * @author Alan Niemiec
+ *
+ *Main Class, creates and starts the Facade
+ */
 public class Main {
 
 	/**

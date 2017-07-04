@@ -15,7 +15,7 @@ public class Facade {
 	private int sequenceSize;
 	
 	/**
-	 * Constructore for the facade
+	 * Constructor for the facade
 	 */
 	public Facade(int sequenceSize){
 		this.sequenceSize = sequenceSize;
@@ -26,9 +26,10 @@ public class Facade {
 	 */
 	public void start(){
 		System.out.println("Proofing that the Lucas numbers come closer to the Golden Ratio than the Fibonacci numbers:");
-		fibonacci.calculate(sequenceSize);
-		System.out.println(fibonacci.sequence+ " size: "+ fibonacci.sequence.size());
-		
+		//fibonacci.calculate(sequenceSize);
+		//System.out.println(fibonacci.sequence+ " size: "+ fibonacci.sequence.size());
+		lucas.calculateRecursively(sequenceSize);
+		System.out.println(lucas.getSequence());
 	}
 	
 	
