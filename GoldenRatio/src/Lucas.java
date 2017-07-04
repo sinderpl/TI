@@ -18,11 +18,16 @@ public class Lucas implements INumberSequence{
 	 */
 	public void calculate(int size) {
 		
-		//Seed values
+		//Variables to keep track of the numbers
+		// Contain initial seed values
 		int prev = 2;
 		int curr = 1;
-		
-		for(int x=0; x<=size; x++){
+		//Add the values to the sequence array
+		sequence.add(prev);
+		sequence.add(curr);
+		GoldenRatio ratio = new GoldenRatio();
+		for(int x=0; x<=size-2; x++){
+			ratio.calculate(prev, curr);
 			//Create the new number by evaluating previous + current
 			int newNumber = prev + curr;
 			//Assign the current number to the previous variable for reference on next iteration
@@ -54,7 +59,7 @@ public class Lucas implements INumberSequence{
 			prevNum = currentNum;
 			//Add the new number to the sequence
 			sequence.add(newNum);
-			//Return the newly created number for furhter calculation
+			//Return the newly created number for further calculation
 			return newNum;
 		}
 	}

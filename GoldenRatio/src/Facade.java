@@ -26,10 +26,10 @@ public class Facade {
 	 */
 	public void start(){
 		System.out.println("Proofing that the Lucas numbers come closer to the Golden Ratio than the Fibonacci numbers:");
-		//fibonacci.calculate(sequenceSize);
-		//System.out.println(fibonacci.sequence+ " size: "+ fibonacci.sequence.size());
-		lucas.calculateRecursively(sequenceSize);
-		System.out.println(lucas.getSequence());
+		fibonacci.calculate(sequenceSize);
+		System.out.println(fibonacci.getSequence()+ " size: "+ fibonacci.getSequence().size());
+		lucas.calculate(sequenceSize);
+		System.out.println(lucas.getSequence()+ " size: "+ fibonacci.getSequence().size());
 	}
 	
 	
