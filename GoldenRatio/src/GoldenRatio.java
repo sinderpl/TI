@@ -32,7 +32,7 @@ public class GoldenRatio{
 	
 	private void eval(int first, int second){
 		float ratio = (((float)first+second)/first);
-		System.out.println(first+"+"+second+"/"+first+" = "+ratio);
+		System.out.printf(first+"+"+second+"/"+first+" = "+"%.3f"+ "\n" , ratio);
 	}
 	
 	
