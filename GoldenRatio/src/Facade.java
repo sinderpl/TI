@@ -45,7 +45,7 @@ public class Facade {
 	
 	private void printSequence(){
 		System.out.println("Proofing that the Lucas numbers come closer to the Golden Ratio than the Fibonacci numbers:");
-		System.out.println("Fibonacci		"+"Lucas		"+"Phi rounded		");
+		System.out.println("Fibonacci		"+"Lucas		"+"Phi rounded");
 		
 		for(int x=0; x<=sequenceSize-1; x++){
 			System.out.println(fibonacci.getSequence().get(x)+"			"+lucas.getSequence().get(x)+"		" + goldenRatio.getSequence().get(x));

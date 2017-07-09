@@ -35,12 +35,21 @@ public class GoldenRatio implements INumberSequence{
 	 * Calculate the Golden Ratio sequence recursively
 	 */
 	public int calculateRecursively(int size) {
+		//Runs down until the size reaches zero and then starts returning
 		if(size <= 0)
 			return size;
 		else{
+			//Calls the method again with decreased size
+			//When that returns it assigns the number to the power variable
 			int power = calculateRecursively(size-1);
+			//Calculate the number based on formula: phi^x
+			//Rounds off the nearest integer
 			int number = (int) Math.round(Math.pow(phi, power));
+			//Increase the power for next calculation
+			power ++;
+			//Add the number to the sequence 
 			sequence.add(number);
+			//Returns the updated power
 			return power;
 		}
 	}

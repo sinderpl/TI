@@ -5,7 +5,9 @@ import org.junit.Test;
 
 public class MainTest {
 	
+	//The limit on the sequenc size
 	int sequenceSize = 25;
+	//Instance of the main method
 	Main Main = new Main();
 
 	@Test
