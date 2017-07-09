@@ -28,14 +28,15 @@ public class Facade {
 		//Calculate the fibonacci sequence
 		fibonacci.calculate(sequenceSize);
 		
-		//System.out.println(fibonacci.getSequence()+ " size: "+ fibonacci.getSequence().size());
 		//Calculate the Lucas sequence
 		lucas.calculate(sequenceSize);
+		
+		//Calculate the Golden Ratio sequence
+		goldenRatio.calculate(sequenceSize);
 		
 		//Print the output 
 		printSequence();
 		
-		//System.out.println(lucas.getSequence()+ " size: "+ fibonacci.getSequence().size());
 	}
 	
 	/**
@@ -47,7 +48,7 @@ public class Facade {
 		System.out.println("Fibonacci		"+"Lucas		"+"Phi rounded		");
 		
 		for(int x=0; x<=sequenceSize-1; x++){
-			System.out.println(fibonacci.getSequence().get(x)+"			"+lucas.getSequence().get(x)+"		");
+			System.out.println(fibonacci.getSequence().get(x)+"			"+lucas.getSequence().get(x)+"		" + goldenRatio.getSequence().get(x));
 		}
 		
 	}

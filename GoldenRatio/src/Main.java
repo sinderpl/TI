@@ -6,11 +6,7 @@
  */
 public class Main {
 
-	/**
-	 * @param args
-	 */
-	
-	//Fixed value for phi as speciifed
+	//Static sequence size for the size of the sequences
 	public static int sequenceSize = 25;
 	public static void main(String[] args) {
 		
