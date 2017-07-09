@@ -27,7 +27,7 @@ public class Lucas implements INumberSequence{
 		sequence.add(curr);
 		GoldenRatio ratio = new GoldenRatio();
 		for(int x=0; x<=size-2; x++){
-			ratio.calculate(prev, curr);
+			//ratio.calculate(prev, curr);
 			//Create the new number by evaluating previous + current
 			int newNumber = prev + curr;
 			//Assign the current number to the previous variable for reference on next iteration
