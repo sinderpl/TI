@@ -19,9 +19,6 @@ public class GoldenRatio implements INumberSequence{
 	 * @param sequenceSize the size of the sequence generated
 	 */
 	public void calculate(int size){
-		
-		
-		
 		for(int x=0; x<=size; x++){
 			//Creates the number in the sequence based on a formula : phi^x
 			//Rounded off to a integer as per the specification
