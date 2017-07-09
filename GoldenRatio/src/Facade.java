@@ -34,7 +34,7 @@ public class Facade {
 		//Calculate the Golden Ratio sequence
 		goldenRatio.calculate(sequenceSize);
 		
-		//Print the output 
+		//Print the output of the sequences
 		printSequence();
 		
 	}

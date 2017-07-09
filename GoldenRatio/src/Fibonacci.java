@@ -48,10 +48,9 @@ public class Fibonacci implements INumberSequence{
 	 */
 	public int calculateRecursively(int size) {
 		//If true start returning numbers, validates if size is valid
-		if(size <= 0){
+		if(size <= 0)
 			//Returns 1 to start the calulation
 			return 1;
-		}
 		else{
 			
 			//Call the function until size reaches 0 and it starts returning

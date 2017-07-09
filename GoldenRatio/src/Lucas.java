@@ -43,10 +43,9 @@ public class Lucas implements INumberSequence{
 	 */
 	public int calculateRecursively(int size) {
 		//Start returning when the size variable reaches 0
-		if (size <= 0){
+		if (size <= 0)
 			//The Lucas seed L2 = 1 which is why this is returned
 			return 1;
-		}
 		else{
 			// Call the function again and wait until it returns
 			// Decrease the size by one each time until it reaches 0

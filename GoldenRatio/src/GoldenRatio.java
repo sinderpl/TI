@@ -7,37 +7,43 @@ import java.util.ArrayList;
  *
  * A class for calculating the Golden Ratio with phi rounded to power of n
  */
-public class GoldenRatio{
+public class GoldenRatio implements INumberSequence{
 	//ArrayList for storing the GoldenRatio number sequence
 	private ArrayList<Integer> sequence = new ArrayList<Integer>();
 	
-	public void calculate(int sequenceSize){
+	//Phi rounded off to the first three decimals as per the specification
+	private final double phi = 1.618;
+	
+	/**
+	 * Calculates the Golden Ratio sequence with seed value of phi= 1.618 multiplied to the power of n
+	 * @param sequenceSize the size of the sequence generated
+	 */
+	public void calculate(int size){
 		
-		//Phi as 
-		double phi = 1.618;
 		
-		for(int x=0; x<=sequenceSize; x++){
-			//
+		
+		for(int x=0; x<=size; x++){
+			//Creates the number in the sequence based on a formula : phi^x
+			//Rounded off to a integer as per the specification
 			int number = (int)Math.round(Math.pow(phi, x));
+			//Add the number to the storage sequence
 			sequence.add(number);
 		}
 	}
 	
 	/**
-	public void calculate(int first, int second) {
-		
-		if(first > second)
-			eval(first, second);
-		else
-			eval(second, first);
+	 * Calculate the Golden Ratio sequence recursively
+	 */
+	public int calculateRecursively(int size) {
+		if(size <= 0)
+			return size;
+		else{
+			int power = calculateRecursively(size-1);
+			int number = (int) Math.round(Math.pow(phi, power));
+			sequence.add(number);
+			return power;
+		}
 	}
-	
-	private void eval(int first, int second){
-		//Add first and second number, then divide by the first number which has been determined to be larger
-		float ratio = (((float)first+second)/first);
-		System.out.printf(first+"+"+second+"/"+first+" = "+"%.3f"+ "\n" , ratio);
-	}
-	**/
 	
 	
 	/**
@@ -46,4 +52,6 @@ public class GoldenRatio{
 	public ArrayList<Integer> getSequence() {
 		return this.sequence;
 	}
+
+	
 }
