@@ -8,12 +8,18 @@ public class Main {
 
 	//Static sequence size for the size of the sequences
 	//As per the specification
-	public static int sequenceSize = 25;
+	private static int sequenceSize = 25;
 	public static void main(String[] args) {
 		
-		Facade facade = new Facade(sequenceSize);
+		Facade facade = new Facade();
 		//Starting the facade kicks off the calculations and printing
-		facade.start();
+		facade.start(getSequenceSize());
+	}
+	public static int getSequenceSize() {
+		return sequenceSize;
+	}
+	public static void setSequenceSize(int sequenceSize) {
+		Main.sequenceSize = sequenceSize;
 	}
 
 }

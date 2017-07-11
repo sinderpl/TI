@@ -11,20 +11,11 @@ public class Facade {
 	private Fibonacci fibonacci = new Fibonacci();
 	private GoldenRatio goldenRatio = new GoldenRatio();
 	
-	//Size of the sequences generated
-	private int sequenceSize;
-	
-	/**
-	 * Constructor for the facade
-	 */
-	public Facade(int sequenceSize){
-		this.sequenceSize = sequenceSize;
-	}
 
 	/**
 	 * Method used for calculating the sequences
 	 */
-	public void start(){
+	public void start(int sequenceSize){
 		//Calculate the fibonacci sequence
 		fibonacci.calculate(sequenceSize);
 		
@@ -35,7 +26,7 @@ public class Facade {
 		goldenRatio.calculate(sequenceSize);
 		
 		//Print the output of the sequences
-		printSequence();
+		printSequence(sequenceSize);
 		
 	}
 	
@@ -43,7 +34,7 @@ public class Facade {
 	 * Prints the output of the Lucas, Fibonacci and Golden Ratio sequences
 	 */
 	
-	private void printSequence(){
+	private void printSequence(int sequenceSize){
 		System.out.println("Proofing that the Lucas numbers come closer to the Golden Ratio than the Fibonacci numbers:");
 		System.out.println("Fibonacci		"+"Lucas		"+"Phi rounded");
 		
